@@ -1,4 +1,3 @@
-
 //checking 
 const present = 1;
 
@@ -51,5 +50,21 @@ for(let i = 1; i<=numberOfWorkingDays;i++){
     empHrs += getWorkingHours(empCheck);
 }
 
-let emgWage = empHrs*wagePerHour;
-console.log("Monthly Wage of the Employee for hours "+empHrs+" is "+emgWage);
+let empWage = empHrs*wagePerHour;
+console.log("Monthly Wage of the Employee for hours "+empHrs+" is "+empWage);
+
+
+//calculating Employee wage Untill hours are 160 or days completed are 20 
+
+empHrs = 0;
+let numberOfTotalDays = 0;
+while(empHrs <= 160 && numberOfTotalDays < 20){
+    
+    empCheck = Math.floor(Math.random()*10)%3;
+    empHrs += getWorkingHours(empCheck);
+    numberOfTotalDays++;
+
+}
+empWage = empHrs*wagePerHour; 
+
+console.log("Total working days are : "+numberOfTotalDays+", Total working hours are : "+empHrs+", Wage of Employee is : "+empWage);
